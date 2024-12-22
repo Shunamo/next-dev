@@ -1,5 +1,5 @@
 export const voteAction = async (teamId: number, token: string) => {
-  const response = await fetch(`/api/votes/demo/${teamId}`, {
+  const response = await fetch(`/votes/demo/${teamId}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -13,7 +13,7 @@ export const voteAction = async (teamId: number, token: string) => {
 };
 
 export const LeaderVoteAction = async (memberId: number, token: string) => {
-  const response = await fetch(`/api/votes/leader/${memberId}`, {
+  const response = await fetch(`/votes/leader/${memberId}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const LeaderVoteAction = async (memberId: number, token: string) => {
 };
 
 export const voteResult = async (token: string) => {
-  const response = await fetch(`/api/votes/demo`, {
+  const response = await fetch(`/votes/demo`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ export const voteResult = async (token: string) => {
 };
 
 export const candiateList = async (token: string) => {
-  const response = await fetch(`/api/votes/leader`, {
+  const response = await fetch(`/votes/leader`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
