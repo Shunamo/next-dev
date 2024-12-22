@@ -7,7 +7,7 @@ export const signUpRequest = async (values: FormData) => {
     throw new Error(`Invalid team: ${values.team}`);
   }
 
-  const response = await fetch('/api/members/join', {
+  const response = await fetch('/members/join', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
